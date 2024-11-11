@@ -1,27 +1,74 @@
 {
   "expo": {
     "name": "SunshineKeyWestChallenge",
+    "scheme": "SunshineKeyWestChallenge",
     "slug": "SunshineKeyWestChallenge",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "automatic",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#f2f2f2"
     },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "remote-notification"
+        ],
+        "CFBundleDisplayName": "Sunshine Key West Challenge",
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLSchemes": [
+              "sunshinekeywestchallenge",
+              "com.devzano.SunshineKeyWestChallenge"
+            ]
+          }
+        ],
+        "entitlements": {
+          "aps-environment": "production"
+        },
+        "LSMinimumSystemVersion": "12.0"
+      },
+      "package": "com.devzano.SunshineKeyWestChallenge",
+      "bundleIdentifier": "com.devzano.SunshineKeyWestChallenge",
+      "displayName": "Sunshine Key West Challenge"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+        "backgroundColor": "#9aeabf"
+      },
+      "package": "com.devzano.SunshineKeyWestChallenge",
+      "displayName": "Sunshine Key West Challenge"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-updates",
+        {
+          "username": "devzano"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "47ea5611-72b9-4ea0-95d6-ac29d784d595"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/47ea5611-72b9-4ea0-95d6-ac29d784d595"
     }
   }
 }
